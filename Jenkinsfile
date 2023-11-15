@@ -27,6 +27,7 @@ pipeline {
             steps {
                 script {
                  // Enclose the sonar-scanner command in double quotes
+				    which sonar-scanner
                     sh """
                         sonar-scanner \
 							-Dsonar.projectKey=OWASP \
