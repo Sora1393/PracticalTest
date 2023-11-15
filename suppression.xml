@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressionsCollection xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+   <suppressions>
+      <suppress>
+         <notes><![CDATA[
+         file name: jquery-2.1.4.min.js
+         ]]></notes>
+         <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+         <cve>CVE-2015-9251</cve>
+      </suppress>
+   </suppressions>
+
+   <suppressions>
+      <suppress>
+         <notes><![CDATA[
+         file name: jquery-2.1.4.min.js
+         ]]></notes>
+         <sha1>43dc554608df885a59ddeece1598c6ace434d747</sha1>
+         <cve>CVE-2020-11022</cve>
+      </suppress>
+   </suppressions>
+
+   <suppressions>
+      <suppress>
+         <notes><![CDATA[
+         file name: jquery-2.1.4.min.js
+         ]]></notes>
+         <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+         <cve>CVE-2020-11023</cve>
+      </suppress>
+   </suppressions>
+
+   <suppressions>
+      <suppress>
+         <notes><![CDATA[
+         file name: jquery-2.1.4.min.js
+         ]]></notes>
+         <packageUrl regex="true">^pkg:javascript/jquery@.*$</packageUrl>
+         <cve>CVE-2020-23064</cve>
+      </suppress>
+   </suppressions>
+</suppressionsCollection>
