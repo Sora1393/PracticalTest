@@ -26,11 +26,14 @@ pipeline {
         stage('SonarQube Scan') {
             steps {
                 script {
-                  sonar-scanner \
-					-Dsonar.projectKey=OWASP \
-					-Dsonar.sources=. \
-					-Dsonar.host.url=http://127.0.0.1:9000 \
-					-Dsonar.token=sqp_58f1661efbd331b677fb5940d1bd5b6c56f133c4
+                 // Enclose the sonar-scanner command in double quotes
+                    sh """
+                        sonar-scanner \
+                        -Dsonar.projectKey=OWASP \
+                        -Dsonar.sources=. \
+                        -Dsonar.host.url=http://127.0.0.1:9000 \
+                        -Dsonar.token=sqp_58f1661efbd331b677fb5940d1bd5b6c56f133c4
+                    """
                 }
             }
         }
