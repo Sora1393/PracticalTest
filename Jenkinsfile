@@ -8,13 +8,17 @@ pipeline {
             }
         }
 
-        stage('OWASP Dependency-Check Vulnerabilities') {
+       stage('OWASP Dependency-Check Vulnerabilities') {
             steps {
                 script {
                     // Assuming you have OWASP Dependency-Check installed in Jenkins
-                    // Run the OWASP Dependency-Check scanner
-                    def odcHome = tool 'OWASP Dependency-Check Vulnerabilities'
-                    bat "${odcHome}\\bin\\dependency-check.bat -n -f ALL --scan . --project OWASP --out ."
+                    dependencyCheck additionalArguments: ''' 
+                        -o './'
+                        -s './'
+                        -f 'ALL' 
+                        --prettyPrint
+                        --suppression suppression.xml
+                    ''', odcInstallation: 'OWASP Dependency-Check Vulnerabilities'
                 }
             }
         }
